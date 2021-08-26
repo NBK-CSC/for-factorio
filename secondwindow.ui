@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>secondwindow</class>
+ <widget class="QDialog" name="secondwindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>473</width>
+    <height>182</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="tabletTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog
+{
+  background : #313032;
+  background : rgba(49, 48, 50, 1);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 3px;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>451</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#widget{
+  background : #232223;
+  background : rgba(35, 34, 35, 1);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 3px;
+  border-radius : 8px;
+ background-repeat : no-repeat;
+}
+QWidget#horizontalLayout{
+  color:white;
+  background : #403F40;
+  background : rgba(64, 63, 64, 1);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 3px;
+  border-radius : 9px;
+}</string>
+   </property>
+   <widget class="QPushButton" name="pushButton_of_save">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>20</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>OCR A Extended</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QPushButton {
+  color:white;
+	  background : #8C8C8C;
+  background : rgba(140, 140, 140, 1);
+  border-style : Solid;
+  border-color : #AFAFAF;
+  border-color : rgba(175, 175, 175, 1);
+  border-width : 3px;
+  border-radius : 6px;
+ }
+
+ QPushButton:hover {
+	  background : #E19727;
+  background : rgba(225, 151, 39, 1);
+  border-style : Solid;
+  border-color : #E5AA5B;
+  border-color : rgba(229, 170, 91, 1);
+  border-width : 3px;
+  border-radius : 6px;
+ }
+
+ QPushButton:pressed {
+  background : #F0BD65;
+  background : rgba(240, 189, 101, 1);
+  border-style : Solid;
+  border-color : #F2D39F;
+  border-color : rgba(242, 211, 159, 1);
+  border-width : 3px;
+  border-radius : 6px;
+ }</string>
+    </property>
+    <property name="text">
+     <string>Save</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>351</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#widget_2{
+
+  background : #403F40;
+  background : rgba(64, 63, 64, 1);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 3px;
+  border-radius : 6px;
+}
+
+QWidget{
+  color:white;
+}</string>
+    </property>
+    <widget class="QLabel" name="number_of_layers_label">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>10</y>
+       <width>151</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>OCR A Extended</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="height_label">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>10</y>
+       <width>81</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>OCR A Extended</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="width_label">
+     <property name="geometry">
+      <rect>
+       <x>19</x>
+       <y>10</y>
+       <width>81</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>OCR A Extended</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QSlider" name="number_of_layers_Slider">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>271</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QSlider::groove:horizontal {
+  height: 8px;
+  margin: 2px 0;
+
+  background : #403F40;
+  background : rgba(64, 63, 64, 1);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 3px;
+  border-radius : 3px;
+
+ }
+
+QSlider::handle:horizontal {
+  width: 10px;
+  margin: -6px 0; 
+
+  background : #403F40;
+  background : rgba(64, 63, 64, 1);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 3px;
+  border-radius : 3px;
+}</string>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="number_of_layers_spinBox">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>70</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>OCR A Extended</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QSpinBox {
+  color:white;
+  background : #403F40;
+  background : rgba(64, 63, 64, 1);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 3px;
+  border-radius : 9px;
+ }
+
+QSpinBox::up-button {
+  subcontrol-origin: border;
+  subcontrol-position: top right; 
+  width: 18px; 
+  background : #8C8C8C;
+  background : rgba(140, 140, 140, 1);
+  border-style : Solid;
+  border-color : #AFAFAF;
+  border-color : rgba(175, 175, 175, 1);
+  border-width : 2px;
+  border-radius : 6px;
+}
+
+QSpinBox::up-button:hover {
+	  background : #E19727;
+  background : rgba(225, 151, 39, 1);
+  border-style : Solid;
+  border-color : #E5AA5B;
+  border-color : rgba(229, 170, 91, 1);
+  border-width : 2px;
+  border-radius : 6px;
+ }
+
+QSpinBox::up-button:pressed {
+  background : #F0BD65;
+  background : rgba(240, 189, 101, 1);
+  border-style : Solid;
+  border-color : #F2D39F;
+  border-color : rgba(242, 211, 159, 1);
+  border-width : 2px;
+  border-radius : 6px;
+ }
+
+QSpinBox::down-button {
+  subcontrol-origin: border;
+  subcontrol-position: bottom right;
+  width: 18px; 
+  background : #8C8C8C;
+  background : rgba(140, 140, 140, 1);
+  border-style : Solid;
+  border-color : #AFAFAF;
+  border-color : rgba(175, 175, 175, 1);
+  border-width : 2px;
+  border-radius : 6px;
+}
+
+QSpinBox::down-button:hover {
+	  background : #E19727;
+  background : rgba(225, 151, 39, 1);
+  border-style : Solid;
+  border-color : #E5AA5B;
+  border-color : rgba(229, 170, 91, 1);
+  border-width : 2px;
+  border-radius : 6px;
+ }
+
+QSpinBox::down-button:pressed {
+  background : #F0BD65;
+  background : rgba(240, 189, 101, 1);
+  border-style : Solid;
+  border-color : #F2D39F;
+  border-color : rgba(242, 211, 159, 1);
+  border-width : 2px;
+  border-radius : 6px;
+ }</string>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget_3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>38</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">  background: url(:/images/ground.png);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 3px;
+  border-radius : 9px;</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>number_of_layers_Slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>number_of_layers_spinBox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>185</x>
+     <y>92</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>238</x>
+     <y>96</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>number_of_layers_spinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>number_of_layers_Slider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>238</x>
+     <y>95</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>62</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
