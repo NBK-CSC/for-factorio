@@ -2,14 +2,16 @@
 #include "ui_mainwindow.h"
 #include "secondwindow.h"
 #include "ui_secondwindow.h"
+#include "version.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-    this->setWindowIcon(QIcon(":/images/chat-icon-select-button-icon.png"));
-    this->setFixedSize(411,181);
+    //this->setWindowIcon(QIcon(":/images/chat-icon-select-button-icon.png"));
+    this->setFixedSize(410,200);
     ui->setupUi(this);
+    ui->label_for_version->setText(VER);
 }
 
 void MainWindow::on_pushButton_clicked()
