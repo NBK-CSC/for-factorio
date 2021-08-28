@@ -1,9 +1,11 @@
 <RCC>
     <qresource prefix="/res"/>
     <qresource prefix="/">
-        <file>images/chat-icon-select-button-icon.png</file>
         <file>images/ground.png</file>
         <file>images/lamp_ligth_off.png</file>
         <file>images/lamp_ligth_on.png</file>
+        <file>images/minus.png</file>
+        <file>images/plus.png</file>
+        <file>images/chat-icon-select-button-icon.ico</file>
     </qresource>
 </RCC>

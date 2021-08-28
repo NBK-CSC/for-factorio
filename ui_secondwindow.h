@@ -32,13 +32,14 @@ public:
     QSlider *number_of_layers_Slider;
     QSpinBox *number_of_layers_spinBox;
     QWidget *widget_3;
+    QLabel *label_for_version;
 
     void setupUi(QDialog *secondwindow)
     {
         if (secondwindow->objectName().isEmpty())
             secondwindow->setObjectName(QString::fromUtf8("secondwindow"));
         secondwindow->setEnabled(true);
-        secondwindow->resize(473, 182);
+        secondwindow->resize(476, 180);
         secondwindow->setMouseTracking(false);
         secondwindow->setTabletTracking(false);
         secondwindow->setLayoutDirection(Qt::LeftToRight);
@@ -55,7 +56,7 @@ public:
 ""));
         widget = new QWidget(secondwindow);
         widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(10, 10, 451, 161));
+        widget->setGeometry(QRect(10, 10, 456, 160));
         widget->setStyleSheet(QString::fromUtf8("QWidget#widget{\n"
 "  background : #232223;\n"
 "  background : rgba(35, 34, 35, 1);\n"
@@ -226,7 +227,11 @@ public:
 "  border-width : 2px;\n"
 "  border-radius : 6px;\n"
 " }\n"
-"\n"
+" QSpinBox::up-arrow {\n"
+"     image: url(:/images/plus.png);\n"
+"     width: 9px;\n"
+"     height: 9px;\n"
+" }\n"
 "QSpinBox::down-button {\n"
 "  subcontrol-origin: border;\n"
 "  subcontrol-position: bottom right;\n"
@@ -254,22 +259,42 @@ public:
 "  background : #F0BD65;\n"
 "  background : rgba(240, 189, 101, 1);\n"
 "  border-style : Solid;\n"
-"  border-color : #F2D39F;\n"
+"  border"
+                        "-color : #F2D39F;\n"
 "  border-color : rgba(242, 211, 159, 1);\n"
 "  border-width : 2px;\n"
-"  border-radius : "
-                        "6px;\n"
+"  border-radius : 6px;\n"
+" }\n"
+" QSpinBox::down-arrow {\n"
+"     image: url(:/images/minus.png);\n"
+"     width: 12px;\n"
+"     height: 9px;\n"
 " }"));
         number_of_layers_spinBox->setMinimum(1);
         widget_3 = new QWidget(widget);
         widget_3->setObjectName(QString::fromUtf8("widget_3"));
-        widget_3->setGeometry(QRect(10, 110, 38, 40));
+        widget_3->setGeometry(QRect(10, 110, 40, 40));
         widget_3->setStyleSheet(QString::fromUtf8("  background: url(:/images/ground.png);\n"
 "  border-style : Solid;\n"
 "  border-color : #000000;\n"
 "  border-color : rgba(0, 0, 0, 1);\n"
 "  border-width : 3px;\n"
 "  border-radius : 9px;"));
+        label_for_version = new QLabel(widget);
+        label_for_version->setObjectName(QString::fromUtf8("label_for_version"));
+        label_for_version->setGeometry(QRect(390, 130, 50, 20));
+        label_for_version->setFont(font1);
+        label_for_version->setStyleSheet(QString::fromUtf8("QWidget{\n"
+"  color:white;\n"
+"  background : #403F40;\n"
+"  background : rgba(64, 63, 64, 1);\n"
+"  border-style : Solid;\n"
+"  border-color : #000000;\n"
+"  border-color : rgba(0, 0, 0, 1);\n"
+"  border-width : 3px;\n"
+"  border-radius : 6px;\n"
+"}\n"
+""));
 
         retranslateUi(secondwindow);
         QObject::connect(number_of_layers_Slider, &QSlider::valueChanged, number_of_layers_spinBox, &QSpinBox::setValue);
@@ -285,6 +310,7 @@ public:
         number_of_layers_label->setText(QCoreApplication::translate("secondwindow", "TextLabel", nullptr));
         height_label->setText(QCoreApplication::translate("secondwindow", "TextLabel", nullptr));
         width_label->setText(QCoreApplication::translate("secondwindow", "TextLabel", nullptr));
+        label_for_version->setText(QCoreApplication::translate("secondwindow", "TextLabel", nullptr));
     } // retranslateUi
 
 };

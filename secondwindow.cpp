@@ -5,9 +5,9 @@ secondwindow::secondwindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::secondwindow)
 {
-    this->setWindowIcon(QIcon(":/images/chat-icon-select-button-icon.png"));
     this->setWindowFlags(windowFlags() | Qt::WindowMinimizeButtonHint);
     ui->setupUi(this);
+    ui->label_for_version->setText(VER);
 }
 
 void secondwindow::set_height(QString h){
@@ -130,10 +130,11 @@ int secondwindow::transate_in_2_to_10(QString binary_number){//a function that c
 
 void secondwindow::create_matrix_of_lamp(){//function that creates a scoreboard from lamps
 
-    //creating a graphic field and setting the size of the window and field
-    this->setFixedSize(477+22*(_width>19?_width-19:0),160+_height*22);
-    ui->widget->setFixedSize(457+22*(_width>19?_width-19:0),140+_height*22);
-    ui->widget_3->setFixedSize(18+22*_width,18+_height*22);
+    //creating a graphic field,label for version and setting the size of the window and field
+    this->setFixedSize(476+22*(_width>16?_width-16:0),160+22*_height);
+    ui->widget->setFixedSize(456+22*(_width>16?_width-16:0),138+22*_height);
+    ui->widget_3->setFixedSize(18+22*_width,18+22*_height);
+    ui->label_for_version->setGeometry({386+22*(_width>16?_width-16:0), 108+22*_height, 60, 20});
 
     _matrix_of_button_lamps=new LampBtn* [_width];
     for (int count=0;count<_width;count++) _matrix_of_button_lamps[count]=new LampBtn[_height];
@@ -145,7 +146,7 @@ void secondwindow::create_matrix_of_lamp(){//function that creates a scoreboard 
             _matrix_of_button_lamps[i][j].lamp_btn->setGeometry({30+i*22, 130+j*22, 20, 20});
             _matrix_of_button_lamps[i][j].lamp_btn->setStyleSheet("border-image: url(\":/images/lamp_ligth_off.png\")");
 
-            _matrix_of_button_lamps[i][j].value=_zero_layers; //пока максимум 32 слоя(кадра)
+            _matrix_of_button_lamps[i][j].value=_zero_layers; //while a maximum of 32 layers (frames)
 
             connect(_matrix_of_button_lamps[i][j].lamp_btn, &QPushButton::clicked, this, &secondwindow::pushButton_of_lamp_clicked);
         }
@@ -173,5 +174,7 @@ void secondwindow::pushButton_of_lamp_clicked(){//a function that sets the value
 
 secondwindow::~secondwindow()
 {
+    for (int count = 0; count < _width; count++)
+        delete []_matrix_of_button_lamps[count];
     delete ui;
 }

@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <string.h>
+#include "version.h"
 
 using namespace std;
 
