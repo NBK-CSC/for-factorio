@@ -7,3 +7,4 @@ The rendered scoreboard is saved in the file 1.txt after optimization.
 - *[ 1] this means that the encoding of this cell is the same as the cell number [ 1],
 
 as well as two-dimensional numbers decoded into the decimal number system at the corresponding numbers.
+

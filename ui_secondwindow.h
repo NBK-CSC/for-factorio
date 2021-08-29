@@ -33,6 +33,8 @@ public:
     QSpinBox *number_of_layers_spinBox;
     QWidget *widget_3;
     QLabel *label_for_version;
+    QPushButton *pushButton_of_delete;
+    QPushButton *pushButton_of_add;
 
     void setupUi(QDialog *secondwindow)
     {
@@ -79,7 +81,7 @@ public:
 "}"));
         pushButton_of_save = new QPushButton(widget);
         pushButton_of_save->setObjectName(QString::fromUtf8("pushButton_of_save"));
-        pushButton_of_save->setGeometry(QRect(370, 20, 71, 31));
+        pushButton_of_save->setGeometry(QRect(370, 10, 75, 40));
         QFont font;
         font.setFamilies({QString::fromUtf8("OCR A Extended")});
         font.setPointSize(12);
@@ -282,8 +284,11 @@ public:
 "  border-radius : 9px;"));
         label_for_version = new QLabel(widget);
         label_for_version->setObjectName(QString::fromUtf8("label_for_version"));
-        label_for_version->setGeometry(QRect(390, 130, 50, 20));
-        label_for_version->setFont(font1);
+        label_for_version->setGeometry(QRect(386, 130, 60, 15));
+        QFont font2;
+        font2.setFamilies({QString::fromUtf8("OCR A Extended")});
+        font2.setPointSize(8);
+        label_for_version->setFont(font2);
         label_for_version->setStyleSheet(QString::fromUtf8("QWidget{\n"
 "  color:white;\n"
 "  background : #403F40;\n"
@@ -295,6 +300,78 @@ public:
 "  border-radius : 6px;\n"
 "}\n"
 ""));
+        pushButton_of_delete = new QPushButton(widget);
+        pushButton_of_delete->setObjectName(QString::fromUtf8("pushButton_of_delete"));
+        pushButton_of_delete->setGeometry(QRect(385, 60, 60, 20));
+        QFont font3;
+        font3.setFamilies({QString::fromUtf8("OCR A Extended")});
+        font3.setPointSize(10);
+        pushButton_of_delete->setFont(font3);
+        pushButton_of_delete->setStyleSheet(QString::fromUtf8(" QPushButton {\n"
+"  color:white;\n"
+"	  background : #8C8C8C;\n"
+"  background : rgba(140, 140, 140, 1);\n"
+"  border-style : Solid;\n"
+"  border-color : #AFAFAF;\n"
+"  border-color : rgba(175, 175, 175, 1);\n"
+"  border-width : 3px;\n"
+"  border-radius : 6px;\n"
+" }\n"
+"\n"
+" QPushButton:hover {\n"
+"	  background : #E19727;\n"
+"  background : rgba(225, 151, 39, 1);\n"
+"  border-style : Solid;\n"
+"  border-color : #E5AA5B;\n"
+"  border-color : rgba(229, 170, 91, 1);\n"
+"  border-width : 3px;\n"
+"  border-radius : 6px;\n"
+" }\n"
+"\n"
+" QPushButton:pressed {\n"
+"  background : #F0BD65;\n"
+"  background : rgba(240, 189, 101, 1);\n"
+"  border-style : Solid;\n"
+"  border-color : #F2D39F;\n"
+"  border-color : rgba(242, 211, 159, 1);\n"
+"  border-width : 3px;\n"
+"  border-radius : 6px;\n"
+" }"));
+        pushButton_of_add = new QPushButton(widget);
+        pushButton_of_add->setObjectName(QString::fromUtf8("pushButton_of_add"));
+        pushButton_of_add->setGeometry(QRect(385, 85, 60, 20));
+        pushButton_of_add->setFont(font3);
+        pushButton_of_add->setToolTipDuration(-1);
+        pushButton_of_add->setStyleSheet(QString::fromUtf8(" QPushButton {\n"
+"  color:white;\n"
+"	  background : #8C8C8C;\n"
+"  background : rgba(140, 140, 140, 1);\n"
+"  border-style : Solid;\n"
+"  border-color : #AFAFAF;\n"
+"  border-color : rgba(175, 175, 175, 1);\n"
+"  border-width : 3px;\n"
+"  border-radius : 6px;\n"
+" }\n"
+"\n"
+" QPushButton:hover {\n"
+"	  background : #E19727;\n"
+"  background : rgba(225, 151, 39, 1);\n"
+"  border-style : Solid;\n"
+"  border-color : #E5AA5B;\n"
+"  border-color : rgba(229, 170, 91, 1);\n"
+"  border-width : 3px;\n"
+"  border-radius : 6px;\n"
+" }\n"
+"\n"
+" QPushButton:pressed {\n"
+"  background : #F0BD65;\n"
+"  background : rgba(240, 189, 101, 1);\n"
+"  border-style : Solid;\n"
+"  border-color : #F2D39F;\n"
+"  border-color : rgba(242, 211, 159, 1);\n"
+"  border-width : 3px;\n"
+"  border-radius : 6px;\n"
+" }"));
 
         retranslateUi(secondwindow);
         QObject::connect(number_of_layers_Slider, &QSlider::valueChanged, number_of_layers_spinBox, &QSpinBox::setValue);
@@ -306,11 +383,34 @@ public:
     void retranslateUi(QDialog *secondwindow)
     {
         secondwindow->setWindowTitle(QCoreApplication::translate("secondwindow", "Dialog", nullptr));
+#if QT_CONFIG(tooltip)
+        pushButton_of_save->setToolTip(QCoreApplication::translate("secondwindow", "Button to save everything to file 1.txt", nullptr));
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(statustip)
+        pushButton_of_save->setStatusTip(QString());
+#endif // QT_CONFIG(statustip)
+#if QT_CONFIG(whatsthis)
+        pushButton_of_save->setWhatsThis(QString());
+#endif // QT_CONFIG(whatsthis)
+#if QT_CONFIG(accessibility)
+        pushButton_of_save->setAccessibleName(QString());
+#endif // QT_CONFIG(accessibility)
+#if QT_CONFIG(accessibility)
+        pushButton_of_save->setAccessibleDescription(QString());
+#endif // QT_CONFIG(accessibility)
         pushButton_of_save->setText(QCoreApplication::translate("secondwindow", "Save", nullptr));
         number_of_layers_label->setText(QCoreApplication::translate("secondwindow", "TextLabel", nullptr));
         height_label->setText(QCoreApplication::translate("secondwindow", "TextLabel", nullptr));
         width_label->setText(QCoreApplication::translate("secondwindow", "TextLabel", nullptr));
         label_for_version->setText(QCoreApplication::translate("secondwindow", "TextLabel", nullptr));
+#if QT_CONFIG(tooltip)
+        pushButton_of_delete->setToolTip(QCoreApplication::translate("secondwindow", "Button, remove the last layer with all content", nullptr));
+#endif // QT_CONFIG(tooltip)
+        pushButton_of_delete->setText(QCoreApplication::translate("secondwindow", "Delete", nullptr));
+#if QT_CONFIG(tooltip)
+        pushButton_of_add->setToolTip(QCoreApplication::translate("secondwindow", "Button to add an extra layer at the end", nullptr));
+#endif // QT_CONFIG(tooltip)
+        pushButton_of_add->setText(QCoreApplication::translate("secondwindow", "Add", nullptr));
     } // retranslateUi
 
 };

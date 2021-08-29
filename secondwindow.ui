@@ -75,9 +75,9 @@ QWidget#horizontalLayout{
     <property name="geometry">
      <rect>
       <x>370</x>
-      <y>20</y>
-      <width>71</width>
-      <height>31</height>
+      <y>10</y>
+      <width>75</width>
+      <height>40</height>
      </rect>
     </property>
     <property name="font">
@@ -85,6 +85,21 @@ QWidget#horizontalLayout{
       <family>OCR A Extended</family>
       <pointsize>12</pointsize>
      </font>
+    </property>
+    <property name="toolTip">
+     <string>Button to save everything to file 1.txt</string>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+    <property name="whatsThis">
+     <string/>
+    </property>
+    <property name="accessibleName">
+     <string/>
+    </property>
+    <property name="accessibleDescription">
+     <string/>
     </property>
     <property name="styleSheet">
      <string notr="true"> QPushButton {
@@ -381,15 +396,16 @@ QSpinBox::down-button:pressed {
    <widget class="QLabel" name="label_for_version">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>386</x>
       <y>130</y>
-      <width>50</width>
-      <height>20</height>
+      <width>60</width>
+      <height>15</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>OCR A Extended</family>
+      <pointsize>8</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -407,6 +423,117 @@ QSpinBox::down-button:pressed {
     </property>
     <property name="text">
      <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_of_delete">
+    <property name="geometry">
+     <rect>
+      <x>385</x>
+      <y>60</y>
+      <width>60</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>OCR A Extended</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Button, remove the last layer with all content</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QPushButton {
+  color:white;
+	  background : #8C8C8C;
+  background : rgba(140, 140, 140, 1);
+  border-style : Solid;
+  border-color : #AFAFAF;
+  border-color : rgba(175, 175, 175, 1);
+  border-width : 3px;
+  border-radius : 6px;
+ }
+
+ QPushButton:hover {
+	  background : #E19727;
+  background : rgba(225, 151, 39, 1);
+  border-style : Solid;
+  border-color : #E5AA5B;
+  border-color : rgba(229, 170, 91, 1);
+  border-width : 3px;
+  border-radius : 6px;
+ }
+
+ QPushButton:pressed {
+  background : #F0BD65;
+  background : rgba(240, 189, 101, 1);
+  border-style : Solid;
+  border-color : #F2D39F;
+  border-color : rgba(242, 211, 159, 1);
+  border-width : 3px;
+  border-radius : 6px;
+ }</string>
+    </property>
+    <property name="text">
+     <string>Delete</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_of_add">
+    <property name="geometry">
+     <rect>
+      <x>385</x>
+      <y>85</y>
+      <width>60</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>OCR A Extended</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Button to add an extra layer at the end</string>
+    </property>
+    <property name="toolTipDuration">
+     <number>-1</number>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QPushButton {
+  color:white;
+	  background : #8C8C8C;
+  background : rgba(140, 140, 140, 1);
+  border-style : Solid;
+  border-color : #AFAFAF;
+  border-color : rgba(175, 175, 175, 1);
+  border-width : 3px;
+  border-radius : 6px;
+ }
+
+ QPushButton:hover {
+	  background : #E19727;
+  background : rgba(225, 151, 39, 1);
+  border-style : Solid;
+  border-color : #E5AA5B;
+  border-color : rgba(229, 170, 91, 1);
+  border-width : 3px;
+  border-radius : 6px;
+ }
+
+ QPushButton:pressed {
+  background : #F0BD65;
+  background : rgba(240, 189, 101, 1);
+  border-style : Solid;
+  border-color : #F2D39F;
+  border-color : rgba(242, 211, 159, 1);
+  border-width : 3px;
+  border-radius : 6px;
+ }</string>
+    </property>
+    <property name="text">
+     <string>Add</string>
     </property>
    </widget>
   </widget>

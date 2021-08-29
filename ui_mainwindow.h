@@ -101,7 +101,7 @@ public:
         label->setMargin(20);
         pushButton = new QPushButton(widget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(320, 110, 61, 31));
+        pushButton->setGeometry(QRect(310, 110, 71, 31));
         QFont font1;
         font1.setFamilies({QString::fromUtf8("OCR A Extended")});
         font1.setPointSize(12);
@@ -432,7 +432,7 @@ public:
         number_of_layers->setValue(5);
         label_for_version = new QLabel(widget);
         label_for_version->setObjectName(QString::fromUtf8("label_for_version"));
-        label_for_version->setGeometry(QRect(320, 150, 60, 20));
+        label_for_version->setGeometry(QRect(320, 155, 60, 15));
         label_for_version->setFont(font2);
         label_for_version->setStyleSheet(QString::fromUtf8("QWidget{\n"
 "  color:white;\n"
@@ -456,7 +456,7 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Set the parameters for width, height, as well as the number of layers (frames) that you want to put.", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Ok", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Create", nullptr));
         label_for_version->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
     } // retranslateUi
 

@@ -27,6 +27,7 @@ void MainWindow::on_pushButton_clicked()
     window.set_width(new_width);
     window.set_number_of_layers(new_number_of_layers);
     window.create_matrix_of_lamp();
+    this->hide();
     window.setModal(true);
     window.exec();
 }

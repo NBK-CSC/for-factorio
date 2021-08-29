@@ -43,6 +43,10 @@ private slots:
 
     void on_pushButton_of_save_clicked();
 
+    void on_pushButton_of_delete_clicked();
+
+    void on_pushButton_of_add_clicked();
+
 private:
 
     QString _Qs_height = "Height: ";
