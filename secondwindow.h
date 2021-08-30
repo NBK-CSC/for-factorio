@@ -33,6 +33,7 @@ public:
     int transate_in_2_to_10(QString);
     void pushButton_of_lamp_clicked();
     void create_matrix_of_lamp();
+    void set_the_size_of_the_windows();
 
     struct LampBtn{
                 QPushButton* lamp_btn;
@@ -51,7 +52,7 @@ private:
 
     QString _Qs_height = "Height: ";
     QString _Qs_width = "Width: ";
-    QString _Qs_number_of_layers = "Number of layers: ";
+    QString _Qs_number_of_layers = "Layers: ";
 
     LampBtn** _matrix_of_button_lamps;
 

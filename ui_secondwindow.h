@@ -23,25 +23,26 @@ QT_BEGIN_NAMESPACE
 class Ui_secondwindow
 {
 public:
-    QWidget *widget;
+    QWidget *widget_1;
     QPushButton *pushButton_of_save;
-    QWidget *widget_2;
+    QWidget *widget_for_label;
     QLabel *number_of_layers_label;
     QLabel *height_label;
     QLabel *width_label;
     QSlider *number_of_layers_Slider;
     QSpinBox *number_of_layers_spinBox;
-    QWidget *widget_3;
     QLabel *label_for_version;
     QPushButton *pushButton_of_delete;
     QPushButton *pushButton_of_add;
+    QWidget *widget_bg_for_ground;
+    QWidget *widget_ground;
 
     void setupUi(QDialog *secondwindow)
     {
         if (secondwindow->objectName().isEmpty())
             secondwindow->setObjectName(QString::fromUtf8("secondwindow"));
         secondwindow->setEnabled(true);
-        secondwindow->resize(476, 180);
+        secondwindow->resize(500, 320);
         secondwindow->setMouseTracking(false);
         secondwindow->setTabletTracking(false);
         secondwindow->setLayoutDirection(Qt::LeftToRight);
@@ -56,10 +57,10 @@ public:
 "  border-width : 3px;\n"
 "}\n"
 ""));
-        widget = new QWidget(secondwindow);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(10, 10, 456, 160));
-        widget->setStyleSheet(QString::fromUtf8("QWidget#widget{\n"
+        widget_1 = new QWidget(secondwindow);
+        widget_1->setObjectName(QString::fromUtf8("widget_1"));
+        widget_1->setGeometry(QRect(10, 10, 480, 300));
+        widget_1->setStyleSheet(QString::fromUtf8("QWidget#widget_1{\n"
 "  background : #232223;\n"
 "  background : rgba(35, 34, 35, 1);\n"
 "  border-style : Solid;\n"
@@ -79,12 +80,12 @@ public:
 "  border-width : 3px;\n"
 "  border-radius : 9px;\n"
 "}"));
-        pushButton_of_save = new QPushButton(widget);
+        pushButton_of_save = new QPushButton(widget_1);
         pushButton_of_save->setObjectName(QString::fromUtf8("pushButton_of_save"));
-        pushButton_of_save->setGeometry(QRect(370, 10, 75, 40));
+        pushButton_of_save->setGeometry(QRect(10, 10, 111, 40));
         QFont font;
         font.setFamilies({QString::fromUtf8("OCR A Extended")});
-        font.setPointSize(12);
+        font.setPointSize(16);
         pushButton_of_save->setFont(font);
         pushButton_of_save->setStyleSheet(QString::fromUtf8(" QPushButton {\n"
 "  color:white;\n"
@@ -116,10 +117,10 @@ public:
 "  border-width : 3px;\n"
 "  border-radius : 6px;\n"
 " }"));
-        widget_2 = new QWidget(widget);
-        widget_2->setObjectName(QString::fromUtf8("widget_2"));
-        widget_2->setGeometry(QRect(10, 10, 351, 51));
-        widget_2->setStyleSheet(QString::fromUtf8("QWidget#widget_2{\n"
+        widget_for_label = new QWidget(widget_1);
+        widget_for_label->setObjectName(QString::fromUtf8("widget_for_label"));
+        widget_for_label->setGeometry(QRect(10, 60, 111, 111));
+        widget_for_label->setStyleSheet(QString::fromUtf8("QWidget{\n"
 "\n"
 "  background : #403F40;\n"
 "  background : rgba(64, 63, 64, 1);\n"
@@ -132,26 +133,37 @@ public:
 "\n"
 "QWidget{\n"
 "  color:white;\n"
-"}"));
-        number_of_layers_label = new QLabel(widget_2);
+"}\n"
+"\n"
+"QWidget#widget_for_label\n"
+"{\n"
+"  background : #313032;\n"
+"  background : rgba(49, 48, 50, 1);\n"
+"  border-style : Solid;\n"
+"  border-color : #000000;\n"
+"  border-color : rgba(0, 0, 0, 1);\n"
+"  border-width : 3px;\n"
+"}\n"
+""));
+        number_of_layers_label = new QLabel(widget_for_label);
         number_of_layers_label->setObjectName(QString::fromUtf8("number_of_layers_label"));
         number_of_layers_label->setEnabled(true);
-        number_of_layers_label->setGeometry(QRect(190, 10, 151, 29));
+        number_of_layers_label->setGeometry(QRect(10, 70, 91, 29));
         QFont font1;
         font1.setFamilies({QString::fromUtf8("OCR A Extended")});
         number_of_layers_label->setFont(font1);
-        height_label = new QLabel(widget_2);
+        height_label = new QLabel(widget_for_label);
         height_label->setObjectName(QString::fromUtf8("height_label"));
-        height_label->setGeometry(QRect(100, 10, 81, 29));
+        height_label->setGeometry(QRect(10, 40, 91, 29));
         height_label->setFont(font1);
-        width_label = new QLabel(widget_2);
+        width_label = new QLabel(widget_for_label);
         width_label->setObjectName(QString::fromUtf8("width_label"));
-        width_label->setGeometry(QRect(19, 10, 81, 29));
+        width_label->setGeometry(QRect(10, 10, 91, 29));
         width_label->setFont(font1);
-        number_of_layers_Slider = new QSlider(widget);
+        number_of_layers_Slider = new QSlider(widget_1);
         number_of_layers_Slider->setObjectName(QString::fromUtf8("number_of_layers_Slider"));
         number_of_layers_Slider->setEnabled(true);
-        number_of_layers_Slider->setGeometry(QRect(10, 70, 271, 20));
+        number_of_layers_Slider->setGeometry(QRect(130, 20, 271, 20));
         number_of_layers_Slider->setStyleSheet(QString::fromUtf8(" QSlider::groove:horizontal {\n"
 "  height: 8px;\n"
 "  margin: 2px 0;\n"
@@ -181,9 +193,9 @@ public:
         number_of_layers_Slider->setMinimum(1);
         number_of_layers_Slider->setValue(1);
         number_of_layers_Slider->setOrientation(Qt::Horizontal);
-        number_of_layers_spinBox = new QSpinBox(widget);
+        number_of_layers_spinBox = new QSpinBox(widget_1);
         number_of_layers_spinBox->setObjectName(QString::fromUtf8("number_of_layers_spinBox"));
-        number_of_layers_spinBox->setGeometry(QRect(300, 70, 61, 31));
+        number_of_layers_spinBox->setGeometry(QRect(410, 10, 61, 31));
         number_of_layers_spinBox->setFont(font1);
         number_of_layers_spinBox->setStyleSheet(QString::fromUtf8(" QSpinBox {\n"
 "  color:white;\n"
@@ -273,18 +285,9 @@ public:
 "     height: 9px;\n"
 " }"));
         number_of_layers_spinBox->setMinimum(1);
-        widget_3 = new QWidget(widget);
-        widget_3->setObjectName(QString::fromUtf8("widget_3"));
-        widget_3->setGeometry(QRect(10, 110, 40, 40));
-        widget_3->setStyleSheet(QString::fromUtf8("  background: url(:/images/ground.png);\n"
-"  border-style : Solid;\n"
-"  border-color : #000000;\n"
-"  border-color : rgba(0, 0, 0, 1);\n"
-"  border-width : 3px;\n"
-"  border-radius : 9px;"));
-        label_for_version = new QLabel(widget);
+        label_for_version = new QLabel(widget_1);
         label_for_version->setObjectName(QString::fromUtf8("label_for_version"));
-        label_for_version->setGeometry(QRect(386, 130, 60, 15));
+        label_for_version->setGeometry(QRect(10, 275, 60, 15));
         QFont font2;
         font2.setFamilies({QString::fromUtf8("OCR A Extended")});
         font2.setPointSize(8);
@@ -300,12 +303,12 @@ public:
 "  border-radius : 6px;\n"
 "}\n"
 ""));
-        pushButton_of_delete = new QPushButton(widget);
+        pushButton_of_delete = new QPushButton(widget_1);
         pushButton_of_delete->setObjectName(QString::fromUtf8("pushButton_of_delete"));
-        pushButton_of_delete->setGeometry(QRect(385, 60, 60, 20));
+        pushButton_of_delete->setGeometry(QRect(20, 180, 81, 31));
         QFont font3;
         font3.setFamilies({QString::fromUtf8("OCR A Extended")});
-        font3.setPointSize(10);
+        font3.setPointSize(14);
         pushButton_of_delete->setFont(font3);
         pushButton_of_delete->setStyleSheet(QString::fromUtf8(" QPushButton {\n"
 "  color:white;\n"
@@ -337,9 +340,9 @@ public:
 "  border-width : 3px;\n"
 "  border-radius : 6px;\n"
 " }"));
-        pushButton_of_add = new QPushButton(widget);
+        pushButton_of_add = new QPushButton(widget_1);
         pushButton_of_add->setObjectName(QString::fromUtf8("pushButton_of_add"));
-        pushButton_of_add->setGeometry(QRect(385, 85, 60, 20));
+        pushButton_of_add->setGeometry(QRect(20, 220, 81, 31));
         pushButton_of_add->setFont(font3);
         pushButton_of_add->setToolTipDuration(-1);
         pushButton_of_add->setStyleSheet(QString::fromUtf8(" QPushButton {\n"
@@ -372,6 +375,28 @@ public:
 "  border-width : 3px;\n"
 "  border-radius : 6px;\n"
 " }"));
+        widget_bg_for_ground = new QWidget(widget_1);
+        widget_bg_for_ground->setObjectName(QString::fromUtf8("widget_bg_for_ground"));
+        widget_bg_for_ground->setGeometry(QRect(130, 60, 340, 230));
+        widget_bg_for_ground->setStyleSheet(QString::fromUtf8("QWidget#widget_bg_for_ground\n"
+"{   background : #313032;\n"
+"  background : rgba(49, 48, 50, 1);\n"
+"  border-style : Solid;\n"
+"  border-color : #000000;\n"
+"  border-color : rgba(0, 0, 0, 1);\n"
+"  border-width : 3px;\n"
+"  border-radius : 6px;\n"
+"}\n"
+""));
+        widget_ground = new QWidget(widget_bg_for_ground);
+        widget_ground->setObjectName(QString::fromUtf8("widget_ground"));
+        widget_ground->setGeometry(QRect(10, 10, 320, 210));
+        widget_ground->setStyleSheet(QString::fromUtf8("  background: url(:/images/ground.png);\n"
+"  border-style : Solid;\n"
+"  border-color : #000000;\n"
+"  border-color : rgba(0, 0, 0, 1);\n"
+"  border-width : 3px;\n"
+"  border-radius : 9px;"));
 
         retranslateUi(secondwindow);
         QObject::connect(number_of_layers_Slider, &QSlider::valueChanged, number_of_layers_spinBox, &QSpinBox::setValue);

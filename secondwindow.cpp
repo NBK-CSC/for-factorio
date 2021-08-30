@@ -129,18 +129,28 @@ int secondwindow::transate_in_2_to_10(QString binary_number){//a function that c
     return decimal_number*(number_sign=='0'?1:-1);
 }
 
+void secondwindow::set_the_size_of_the_windows(){
 
-
-void secondwindow::create_matrix_of_lamp(){//function that creates a scoreboard from lamps
+     //the number of lamps that fit in the widget_ground window that does not exceed the size of this window
+    int w=14;
+    int h=9;
 
     //creating a graphic field,label for version and setting the size of the window and field
-    this->setFixedSize(476+22*(_width>16?_width-16:0),160+22*_height);
-    ui->widget->setFixedSize(456+22*(_width>16?_width-16:0),138+22*_height);
-    ui->widget_3->setFixedSize(18+22*_width,18+22*_height);
-    ui->label_for_version->setGeometry({386+22*(_width>16?_width-16:0), 113+22*_height, 60, 15});
-    //ui->pushButton_of_add->setGeometry({386+22*(_width>16?_width-16:0), 100, 60, 20});
-    //ui->pushButton_of_delete->setGeometry({386+22*(_width>16?_width-16:0), 70, 60, 20});
+    this->setFixedSize(500+22*(_width>w?_width-w:0),320+22*(_height>h?_height-h:0));
+    ui->widget_1->setFixedSize(480+22*(_width>w?_width-w:0),300+22*(_height>h?_height-h:0));
 
+    ui->widget_bg_for_ground->setFixedSize(340+22*(_width>w?_width-w:0),230+22*(_height>h?_height-h:0));
+    ui->widget_ground->setFixedSize(320+22*(_width>w?_width-w:0),210+22*(_height>h?_height-h:0));
+
+    //ui->widget_bg_for_ground->setFixedSize(34+22*_width,34+22*_height);
+    //ui->widget_ground->setFixedSize(14+22*_width,14+22*_height);
+
+    ui->label_for_version->setGeometry({10, 275+22*(_height>h?_height-h:0), 60, 15});
+
+}
+
+void secondwindow::create_matrix_of_lamp(){//function that creates a scoreboard from lamps
+    set_the_size_of_the_windows();
 
     _matrix_of_button_lamps=new LampBtn* [_width];
     for (int count=0;count<_width;count++) _matrix_of_button_lamps[count]=new LampBtn[_height];
@@ -149,7 +159,7 @@ void secondwindow::create_matrix_of_lamp(){//function that creates a scoreboard 
         for (int j=0;j<_height;j++){
             //creating a scoreboard of lamp buttons
             _matrix_of_button_lamps[i][j].lamp_btn=new QPushButton(this);
-            _matrix_of_button_lamps[i][j].lamp_btn->setGeometry({30+i*22, 130+j*22, 20, 20});
+            _matrix_of_button_lamps[i][j].lamp_btn->setGeometry({158+i*22, 86+j*22, 20, 20});
             _matrix_of_button_lamps[i][j].lamp_btn->setStyleSheet("border-image: url(\":/images/lamp_ligth_off.png\")");
 
             _matrix_of_button_lamps[i][j].value=_zero_layers; //while a maximum of 32 layers (frames)

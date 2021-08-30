@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>476</width>
-    <height>180</height>
+    <width>500</width>
+    <height>320</height>
    </rect>
   </property>
   <property name="mouseTracking">
@@ -40,17 +40,17 @@
 }
 </string>
   </property>
-  <widget class="QWidget" name="widget" native="true">
+  <widget class="QWidget" name="widget_1" native="true">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>456</width>
-     <height>160</height>
+     <width>480</width>
+     <height>300</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QWidget#widget{
+    <string notr="true">QWidget#widget_1{
   background : #232223;
   background : rgba(35, 34, 35, 1);
   border-style : Solid;
@@ -74,16 +74,16 @@ QWidget#horizontalLayout{
    <widget class="QPushButton" name="pushButton_of_save">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>10</x>
       <y>10</y>
-      <width>75</width>
+      <width>111</width>
       <height>40</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>OCR A Extended</family>
-      <pointsize>12</pointsize>
+      <pointsize>16</pointsize>
      </font>
     </property>
     <property name="toolTip">
@@ -137,17 +137,17 @@ QWidget#horizontalLayout{
      <string>Save</string>
     </property>
    </widget>
-   <widget class="QWidget" name="widget_2" native="true">
+   <widget class="QWidget" name="widget_for_label" native="true">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
-      <width>351</width>
-      <height>51</height>
+      <y>60</y>
+      <width>111</width>
+      <height>111</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QWidget#widget_2{
+     <string notr="true">QWidget{
 
   background : #403F40;
   background : rgba(64, 63, 64, 1);
@@ -160,7 +160,18 @@ QWidget#horizontalLayout{
 
 QWidget{
   color:white;
-}</string>
+}
+
+QWidget#widget_for_label
+{
+  background : #313032;
+  background : rgba(49, 48, 50, 1);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 3px;
+}
+</string>
     </property>
     <widget class="QLabel" name="number_of_layers_label">
      <property name="enabled">
@@ -168,9 +179,9 @@ QWidget{
      </property>
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>10</y>
-       <width>151</width>
+       <x>10</x>
+       <y>70</y>
+       <width>91</width>
        <height>29</height>
       </rect>
      </property>
@@ -186,9 +197,9 @@ QWidget{
     <widget class="QLabel" name="height_label">
      <property name="geometry">
       <rect>
-       <x>100</x>
-       <y>10</y>
-       <width>81</width>
+       <x>10</x>
+       <y>40</y>
+       <width>91</width>
        <height>29</height>
       </rect>
      </property>
@@ -204,9 +215,9 @@ QWidget{
     <widget class="QLabel" name="width_label">
      <property name="geometry">
       <rect>
-       <x>19</x>
+       <x>10</x>
        <y>10</y>
-       <width>81</width>
+       <width>91</width>
        <height>29</height>
       </rect>
      </property>
@@ -226,8 +237,8 @@ QWidget{
     </property>
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>70</y>
+      <x>130</x>
+      <y>20</y>
       <width>271</width>
       <height>20</height>
      </rect>
@@ -273,8 +284,8 @@ QSlider::handle:horizontal {
    <widget class="QSpinBox" name="number_of_layers_spinBox">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>70</y>
+      <x>410</x>
+      <y>10</y>
       <width>61</width>
       <height>31</height>
      </rect>
@@ -375,29 +386,11 @@ QSpinBox::down-button:pressed {
      <number>1</number>
     </property>
    </widget>
-   <widget class="QWidget" name="widget_3" native="true">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>110</y>
-      <width>40</width>
-      <height>40</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">  background: url(:/images/ground.png);
-  border-style : Solid;
-  border-color : #000000;
-  border-color : rgba(0, 0, 0, 1);
-  border-width : 3px;
-  border-radius : 9px;</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_for_version">
     <property name="geometry">
      <rect>
-      <x>386</x>
-      <y>130</y>
+      <x>10</x>
+      <y>275</y>
       <width>60</width>
       <height>15</height>
      </rect>
@@ -428,16 +421,16 @@ QSpinBox::down-button:pressed {
    <widget class="QPushButton" name="pushButton_of_delete">
     <property name="geometry">
      <rect>
-      <x>385</x>
-      <y>60</y>
-      <width>60</width>
-      <height>20</height>
+      <x>20</x>
+      <y>180</y>
+      <width>81</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>OCR A Extended</family>
-      <pointsize>10</pointsize>
+      <pointsize>14</pointsize>
      </font>
     </property>
     <property name="toolTip">
@@ -482,16 +475,16 @@ QSpinBox::down-button:pressed {
    <widget class="QPushButton" name="pushButton_of_add">
     <property name="geometry">
      <rect>
-      <x>385</x>
-      <y>85</y>
-      <width>60</width>
-      <height>20</height>
+      <x>20</x>
+      <y>220</y>
+      <width>81</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>OCR A Extended</family>
-      <pointsize>10</pointsize>
+      <pointsize>14</pointsize>
      </font>
     </property>
     <property name="toolTip">
@@ -535,6 +528,46 @@ QSpinBox::down-button:pressed {
     <property name="text">
      <string>Add</string>
     </property>
+   </widget>
+   <widget class="QWidget" name="widget_bg_for_ground" native="true">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>60</y>
+      <width>340</width>
+      <height>230</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#widget_bg_for_ground
+{   background : #313032;
+  background : rgba(49, 48, 50, 1);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 3px;
+  border-radius : 6px;
+}
+</string>
+    </property>
+    <widget class="QWidget" name="widget_ground" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>320</width>
+       <height>210</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">  background: url(:/images/ground.png);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 3px;
+  border-radius : 9px;</string>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>
