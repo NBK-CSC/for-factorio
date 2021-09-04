@@ -33,20 +33,27 @@ public:
     int transate_in_2_to_10(QString);
     void pushButton_of_lamp_clicked();
     void create_matrix_of_lamp();
-    void set_the_size_of_the_windows();
+    void set_the_size_of_the_windows(); 
+    void ClearLayer(int);
+    void Refresh();
 
     struct LampBtn{
                 QPushButton* lamp_btn;
                 QString value;
             };
-private slots:
+public slots:
     void on_number_of_layers_Slider_valueChanged(int value);
+private slots:
+    //void on_number_of_layers_Slider_valueChanged(int value);
 
     void on_pushButton_of_save_clicked();
 
     void on_pushButton_of_delete_clicked();
 
     void on_pushButton_of_add_clicked();
+
+    void on_pushButton_of_clear_clicked();
+
 
 private:
 

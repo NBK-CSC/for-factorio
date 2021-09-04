@@ -32,17 +32,21 @@ public:
     QSlider *number_of_layers_Slider;
     QSpinBox *number_of_layers_spinBox;
     QLabel *label_for_version;
-    QPushButton *pushButton_of_delete;
-    QPushButton *pushButton_of_add;
     QWidget *widget_bg_for_ground;
     QWidget *widget_ground;
+    QLabel *clear_label_2;
+    QPushButton *pushButton_of_clear;
+    QLabel *clear_label_3;
+    QPushButton *pushButton_of_delete;
+    QLabel *clear_label_4;
+    QPushButton *pushButton_of_add;
 
     void setupUi(QDialog *secondwindow)
     {
         if (secondwindow->objectName().isEmpty())
             secondwindow->setObjectName(QString::fromUtf8("secondwindow"));
         secondwindow->setEnabled(true);
-        secondwindow->resize(500, 320);
+        secondwindow->resize(500, 380);
         secondwindow->setMouseTracking(false);
         secondwindow->setTabletTracking(false);
         secondwindow->setLayoutDirection(Qt::LeftToRight);
@@ -59,7 +63,7 @@ public:
 ""));
         widget_1 = new QWidget(secondwindow);
         widget_1->setObjectName(QString::fromUtf8("widget_1"));
-        widget_1->setGeometry(QRect(10, 10, 480, 300));
+        widget_1->setGeometry(QRect(10, 10, 480, 360));
         widget_1->setStyleSheet(QString::fromUtf8("QWidget#widget_1{\n"
 "  background : #232223;\n"
 "  background : rgba(35, 34, 35, 1);\n"
@@ -84,7 +88,7 @@ public:
         pushButton_of_save->setObjectName(QString::fromUtf8("pushButton_of_save"));
         pushButton_of_save->setGeometry(QRect(10, 10, 111, 40));
         QFont font;
-        font.setFamilies({QString::fromUtf8("OCR A Extended")});
+        font.setFamilies({QString::fromUtf8("Segoe UI Black")});
         font.setPointSize(16);
         pushButton_of_save->setFont(font);
         pushButton_of_save->setStyleSheet(QString::fromUtf8(" QPushButton {\n"
@@ -119,7 +123,7 @@ public:
 " }"));
         widget_for_label = new QWidget(widget_1);
         widget_for_label->setObjectName(QString::fromUtf8("widget_for_label"));
-        widget_for_label->setGeometry(QRect(10, 60, 111, 111));
+        widget_for_label->setGeometry(QRect(150, 50, 311, 51));
         widget_for_label->setStyleSheet(QString::fromUtf8("QWidget{\n"
 "\n"
 "  background : #403F40;\n"
@@ -148,13 +152,13 @@ public:
         number_of_layers_label = new QLabel(widget_for_label);
         number_of_layers_label->setObjectName(QString::fromUtf8("number_of_layers_label"));
         number_of_layers_label->setEnabled(true);
-        number_of_layers_label->setGeometry(QRect(10, 70, 91, 29));
+        number_of_layers_label->setGeometry(QRect(210, 10, 91, 29));
         QFont font1;
-        font1.setFamilies({QString::fromUtf8("OCR A Extended")});
+        font1.setFamilies({QString::fromUtf8("Segoe UI Black")});
         number_of_layers_label->setFont(font1);
         height_label = new QLabel(widget_for_label);
         height_label->setObjectName(QString::fromUtf8("height_label"));
-        height_label->setGeometry(QRect(10, 40, 91, 29));
+        height_label->setGeometry(QRect(110, 10, 91, 29));
         height_label->setFont(font1);
         width_label = new QLabel(widget_for_label);
         width_label->setObjectName(QString::fromUtf8("width_label"));
@@ -287,9 +291,9 @@ public:
         number_of_layers_spinBox->setMinimum(1);
         label_for_version = new QLabel(widget_1);
         label_for_version->setObjectName(QString::fromUtf8("label_for_version"));
-        label_for_version->setGeometry(QRect(10, 275, 60, 15));
+        label_for_version->setGeometry(QRect(20, 330, 60, 15));
         QFont font2;
-        font2.setFamilies({QString::fromUtf8("OCR A Extended")});
+        font2.setFamilies({QString::fromUtf8("Segoe UI Black")});
         font2.setPointSize(8);
         label_for_version->setFont(font2);
         label_for_version->setStyleSheet(QString::fromUtf8("QWidget{\n"
@@ -303,13 +307,111 @@ public:
 "  border-radius : 6px;\n"
 "}\n"
 ""));
+        widget_bg_for_ground = new QWidget(widget_1);
+        widget_bg_for_ground->setObjectName(QString::fromUtf8("widget_bg_for_ground"));
+        widget_bg_for_ground->setGeometry(QRect(130, 120, 340, 230));
+        widget_bg_for_ground->setStyleSheet(QString::fromUtf8("QWidget#widget_bg_for_ground\n"
+"{   background : #313032;\n"
+"  background : rgba(49, 48, 50, 1);\n"
+"  border-style : Solid;\n"
+"  border-color : #000000;\n"
+"  border-color : rgba(0, 0, 0, 1);\n"
+"  border-width : 3px;\n"
+"  border-radius : 6px;\n"
+"}\n"
+""));
+        widget_ground = new QWidget(widget_bg_for_ground);
+        widget_ground->setObjectName(QString::fromUtf8("widget_ground"));
+        widget_ground->setGeometry(QRect(10, 10, 320, 210));
+        widget_ground->setStyleSheet(QString::fromUtf8("  background: url(:/images/ground.png);\n"
+"  border-style : Solid;\n"
+"  border-color : #000000;\n"
+"  border-color : rgba(0, 0, 0, 1);\n"
+"  border-width : 3px;\n"
+"  border-radius : 9px;"));
+        clear_label_2 = new QLabel(widget_1);
+        clear_label_2->setObjectName(QString::fromUtf8("clear_label_2"));
+        clear_label_2->setGeometry(QRect(10, 70, 111, 71));
+        QFont font3;
+        font3.setFamilies({QString::fromUtf8("Segoe UI Black")});
+        font3.setPointSize(6);
+        font3.setKerning(true);
+        clear_label_2->setFont(font3);
+        clear_label_2->setStyleSheet(QString::fromUtf8("QWidget{\n"
+"  color:white;\n"
+"  background : #403F40;\n"
+"  background : rgba(64, 63, 64, 1);\n"
+"  border-style : Solid;\n"
+"  border-color : #000000;\n"
+"  border-color : rgba(0, 0, 0, 1);\n"
+"  border-width : 3px;\n"
+"  border-radius : 6px;\n"
+"}\n"
+"\n"
+""));
+        clear_label_2->setFrameShadow(QFrame::Plain);
+        clear_label_2->setScaledContents(false);
+        clear_label_2->setWordWrap(true);
+        pushButton_of_clear = new QPushButton(widget_1);
+        pushButton_of_clear->setObjectName(QString::fromUtf8("pushButton_of_clear"));
+        pushButton_of_clear->setGeometry(QRect(20, 100, 81, 31));
+        QFont font4;
+        font4.setFamilies({QString::fromUtf8("Segoe UI Black")});
+        font4.setPointSize(14);
+        pushButton_of_clear->setFont(font4);
+        pushButton_of_clear->setStyleSheet(QString::fromUtf8(" QPushButton {\n"
+"  color:white;\n"
+"	  background : #8C8C8C;\n"
+"  background : rgba(140, 140, 140, 1);\n"
+"  border-style : Solid;\n"
+"  border-color : #AFAFAF;\n"
+"  border-color : rgba(175, 175, 175, 1);\n"
+"  border-width : 3px;\n"
+"  border-radius : 6px;\n"
+" }\n"
+"\n"
+" QPushButton:hover {\n"
+"	  background : #E19727;\n"
+"  background : rgba(225, 151, 39, 1);\n"
+"  border-style : Solid;\n"
+"  border-color : #E5AA5B;\n"
+"  border-color : rgba(229, 170, 91, 1);\n"
+"  border-width : 3px;\n"
+"  border-radius : 6px;\n"
+" }\n"
+"\n"
+" QPushButton:pressed {\n"
+"  background : #F0BD65;\n"
+"  background : rgba(240, 189, 101, 1);\n"
+"  border-style : Solid;\n"
+"  border-color : #F2D39F;\n"
+"  border-color : rgba(242, 211, 159, 1);\n"
+"  border-width : 3px;\n"
+"  border-radius : 6px;\n"
+" }"));
+        clear_label_3 = new QLabel(widget_1);
+        clear_label_3->setObjectName(QString::fromUtf8("clear_label_3"));
+        clear_label_3->setGeometry(QRect(10, 150, 111, 71));
+        clear_label_3->setFont(font3);
+        clear_label_3->setStyleSheet(QString::fromUtf8("QWidget{\n"
+"  color:white;\n"
+"  background : #403F40;\n"
+"  background : rgba(64, 63, 64, 1);\n"
+"  border-style : Solid;\n"
+"  border-color : #000000;\n"
+"  border-color : rgba(0, 0, 0, 1);\n"
+"  border-width : 3px;\n"
+"  border-radius : 6px;\n"
+"}\n"
+"\n"
+""));
+        clear_label_3->setFrameShadow(QFrame::Raised);
+        clear_label_3->setScaledContents(false);
+        clear_label_3->setWordWrap(true);
         pushButton_of_delete = new QPushButton(widget_1);
         pushButton_of_delete->setObjectName(QString::fromUtf8("pushButton_of_delete"));
         pushButton_of_delete->setGeometry(QRect(20, 180, 81, 31));
-        QFont font3;
-        font3.setFamilies({QString::fromUtf8("OCR A Extended")});
-        font3.setPointSize(14);
-        pushButton_of_delete->setFont(font3);
+        pushButton_of_delete->setFont(font4);
         pushButton_of_delete->setStyleSheet(QString::fromUtf8(" QPushButton {\n"
 "  color:white;\n"
 "	  background : #8C8C8C;\n"
@@ -340,10 +442,29 @@ public:
 "  border-width : 3px;\n"
 "  border-radius : 6px;\n"
 " }"));
+        clear_label_4 = new QLabel(widget_1);
+        clear_label_4->setObjectName(QString::fromUtf8("clear_label_4"));
+        clear_label_4->setGeometry(QRect(10, 230, 111, 81));
+        clear_label_4->setFont(font3);
+        clear_label_4->setStyleSheet(QString::fromUtf8("QWidget{\n"
+"  color:white;\n"
+"  background : #403F40;\n"
+"  background : rgba(64, 63, 64, 1);\n"
+"  border-style : Solid;\n"
+"  border-color : #000000;\n"
+"  border-color : rgba(0, 0, 0, 1);\n"
+"  border-width : 3px;\n"
+"  border-radius : 6px;\n"
+"}\n"
+"\n"
+""));
+        clear_label_4->setFrameShadow(QFrame::Raised);
+        clear_label_4->setScaledContents(false);
+        clear_label_4->setWordWrap(true);
         pushButton_of_add = new QPushButton(widget_1);
         pushButton_of_add->setObjectName(QString::fromUtf8("pushButton_of_add"));
-        pushButton_of_add->setGeometry(QRect(20, 220, 81, 31));
-        pushButton_of_add->setFont(font3);
+        pushButton_of_add->setGeometry(QRect(20, 270, 81, 31));
+        pushButton_of_add->setFont(font4);
         pushButton_of_add->setToolTipDuration(-1);
         pushButton_of_add->setStyleSheet(QString::fromUtf8(" QPushButton {\n"
 "  color:white;\n"
@@ -375,28 +496,6 @@ public:
 "  border-width : 3px;\n"
 "  border-radius : 6px;\n"
 " }"));
-        widget_bg_for_ground = new QWidget(widget_1);
-        widget_bg_for_ground->setObjectName(QString::fromUtf8("widget_bg_for_ground"));
-        widget_bg_for_ground->setGeometry(QRect(130, 60, 340, 230));
-        widget_bg_for_ground->setStyleSheet(QString::fromUtf8("QWidget#widget_bg_for_ground\n"
-"{   background : #313032;\n"
-"  background : rgba(49, 48, 50, 1);\n"
-"  border-style : Solid;\n"
-"  border-color : #000000;\n"
-"  border-color : rgba(0, 0, 0, 1);\n"
-"  border-width : 3px;\n"
-"  border-radius : 6px;\n"
-"}\n"
-""));
-        widget_ground = new QWidget(widget_bg_for_ground);
-        widget_ground->setObjectName(QString::fromUtf8("widget_ground"));
-        widget_ground->setGeometry(QRect(10, 10, 320, 210));
-        widget_ground->setStyleSheet(QString::fromUtf8("  background: url(:/images/ground.png);\n"
-"  border-style : Solid;\n"
-"  border-color : #000000;\n"
-"  border-color : rgba(0, 0, 0, 1);\n"
-"  border-width : 3px;\n"
-"  border-radius : 9px;"));
 
         retranslateUi(secondwindow);
         QObject::connect(number_of_layers_Slider, &QSlider::valueChanged, number_of_layers_spinBox, &QSpinBox::setValue);
@@ -428,10 +527,17 @@ public:
         height_label->setText(QCoreApplication::translate("secondwindow", "TextLabel", nullptr));
         width_label->setText(QCoreApplication::translate("secondwindow", "TextLabel", nullptr));
         label_for_version->setText(QCoreApplication::translate("secondwindow", "TextLabel", nullptr));
+        clear_label_2->setText(QCoreApplication::translate("secondwindow", "<html><head/><body><p><span style=\" font-size:6pt;\">To clear this layer, click the &quot;Clear&quot; button.</span></p><p><br/></p></body></html>", nullptr));
+#if QT_CONFIG(tooltip)
+        pushButton_of_clear->setToolTip(QCoreApplication::translate("secondwindow", "Button, remove the last layer with all content", nullptr));
+#endif // QT_CONFIG(tooltip)
+        pushButton_of_clear->setText(QCoreApplication::translate("secondwindow", "Clear", nullptr));
+        clear_label_3->setText(QCoreApplication::translate("secondwindow", "<html><head/><body><p><span style=\" font-size:6pt;\">To remove the last layer, click the &quot;Delete&quot; button.</span></p><p><br/></p></body></html>", nullptr));
 #if QT_CONFIG(tooltip)
         pushButton_of_delete->setToolTip(QCoreApplication::translate("secondwindow", "Button, remove the last layer with all content", nullptr));
 #endif // QT_CONFIG(tooltip)
         pushButton_of_delete->setText(QCoreApplication::translate("secondwindow", "Delete", nullptr));
+        clear_label_4->setText(QCoreApplication::translate("secondwindow", "<html><head/><body><p><span style=\" font-size:6pt;\">To add an additional layer at the end, click the &quot;Add&quot; button.</span></p><p><br/></p></body></html>", nullptr));
 #if QT_CONFIG(tooltip)
         pushButton_of_add->setToolTip(QCoreApplication::translate("secondwindow", "Button to add an extra layer at the end", nullptr));
 #endif // QT_CONFIG(tooltip)

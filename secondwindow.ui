@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>500</width>
-    <height>320</height>
+    <height>380</height>
    </rect>
   </property>
   <property name="mouseTracking">
@@ -46,7 +46,7 @@
      <x>10</x>
      <y>10</y>
      <width>480</width>
-     <height>300</height>
+     <height>360</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -82,7 +82,7 @@ QWidget#horizontalLayout{
     </property>
     <property name="font">
      <font>
-      <family>OCR A Extended</family>
+      <family>Segoe UI Black</family>
       <pointsize>16</pointsize>
      </font>
     </property>
@@ -140,10 +140,10 @@ QWidget#horizontalLayout{
    <widget class="QWidget" name="widget_for_label" native="true">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>60</y>
-      <width>111</width>
-      <height>111</height>
+      <x>150</x>
+      <y>50</y>
+      <width>311</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -179,15 +179,15 @@ QWidget#widget_for_label
      </property>
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>70</y>
+       <x>210</x>
+       <y>10</y>
        <width>91</width>
        <height>29</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>OCR A Extended</family>
+       <family>Segoe UI Black</family>
       </font>
      </property>
      <property name="text">
@@ -197,15 +197,15 @@ QWidget#widget_for_label
     <widget class="QLabel" name="height_label">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>40</y>
+       <x>110</x>
+       <y>10</y>
        <width>91</width>
        <height>29</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>OCR A Extended</family>
+       <family>Segoe UI Black</family>
       </font>
      </property>
      <property name="text">
@@ -223,7 +223,7 @@ QWidget#widget_for_label
      </property>
      <property name="font">
       <font>
-       <family>OCR A Extended</family>
+       <family>Segoe UI Black</family>
       </font>
      </property>
      <property name="text">
@@ -292,7 +292,7 @@ QSlider::handle:horizontal {
     </property>
     <property name="font">
      <font>
-      <family>OCR A Extended</family>
+      <family>Segoe UI Black</family>
      </font>
     </property>
     <property name="styleSheet">
@@ -389,15 +389,15 @@ QSpinBox::down-button:pressed {
    <widget class="QLabel" name="label_for_version">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>275</y>
+      <x>20</x>
+      <y>330</y>
       <width>60</width>
       <height>15</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>OCR A Extended</family>
+      <family>Segoe UI Black</family>
       <pointsize>8</pointsize>
      </font>
     </property>
@@ -418,6 +418,186 @@ QSpinBox::down-button:pressed {
      <string>TextLabel</string>
     </property>
    </widget>
+   <widget class="QWidget" name="widget_bg_for_ground" native="true">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>120</y>
+      <width>340</width>
+      <height>230</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#widget_bg_for_ground
+{   background : #313032;
+  background : rgba(49, 48, 50, 1);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 3px;
+  border-radius : 6px;
+}
+</string>
+    </property>
+    <widget class="QWidget" name="widget_ground" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>320</width>
+       <height>210</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">  background: url(:/images/ground.png);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 3px;
+  border-radius : 9px;</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="clear_label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>111</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Black</family>
+      <pointsize>6</pointsize>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget{
+  color:white;
+  background : #403F40;
+  background : rgba(64, 63, 64, 1);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 3px;
+  border-radius : 6px;
+}
+
+</string>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;To clear this layer, click the &amp;quot;Clear&amp;quot; button.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_of_clear">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Black</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Button, remove the last layer with all content</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QPushButton {
+  color:white;
+	  background : #8C8C8C;
+  background : rgba(140, 140, 140, 1);
+  border-style : Solid;
+  border-color : #AFAFAF;
+  border-color : rgba(175, 175, 175, 1);
+  border-width : 3px;
+  border-radius : 6px;
+ }
+
+ QPushButton:hover {
+	  background : #E19727;
+  background : rgba(225, 151, 39, 1);
+  border-style : Solid;
+  border-color : #E5AA5B;
+  border-color : rgba(229, 170, 91, 1);
+  border-width : 3px;
+  border-radius : 6px;
+ }
+
+ QPushButton:pressed {
+  background : #F0BD65;
+  background : rgba(240, 189, 101, 1);
+  border-style : Solid;
+  border-color : #F2D39F;
+  border-color : rgba(242, 211, 159, 1);
+  border-width : 3px;
+  border-radius : 6px;
+ }</string>
+    </property>
+    <property name="text">
+     <string>Clear</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="clear_label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>111</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Black</family>
+      <pointsize>6</pointsize>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget{
+  color:white;
+  background : #403F40;
+  background : rgba(64, 63, 64, 1);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 3px;
+  border-radius : 6px;
+}
+
+</string>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;To remove the last layer, click the &amp;quot;Delete&amp;quot; button.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
    <widget class="QPushButton" name="pushButton_of_delete">
     <property name="geometry">
      <rect>
@@ -429,7 +609,7 @@ QSpinBox::down-button:pressed {
     </property>
     <property name="font">
      <font>
-      <family>OCR A Extended</family>
+      <family>Segoe UI Black</family>
       <pointsize>14</pointsize>
      </font>
     </property>
@@ -472,18 +652,61 @@ QSpinBox::down-button:pressed {
      <string>Delete</string>
     </property>
    </widget>
+   <widget class="QLabel" name="clear_label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>111</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Black</family>
+      <pointsize>6</pointsize>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget{
+  color:white;
+  background : #403F40;
+  background : rgba(64, 63, 64, 1);
+  border-style : Solid;
+  border-color : #000000;
+  border-color : rgba(0, 0, 0, 1);
+  border-width : 3px;
+  border-radius : 6px;
+}
+
+</string>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;To add an additional layer at the end, click the &amp;quot;Add&amp;quot; button.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
    <widget class="QPushButton" name="pushButton_of_add">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>220</y>
+      <y>270</y>
       <width>81</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>OCR A Extended</family>
+      <family>Segoe UI Black</family>
       <pointsize>14</pointsize>
      </font>
     </property>
@@ -528,46 +751,6 @@ QSpinBox::down-button:pressed {
     <property name="text">
      <string>Add</string>
     </property>
-   </widget>
-   <widget class="QWidget" name="widget_bg_for_ground" native="true">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>60</y>
-      <width>340</width>
-      <height>230</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QWidget#widget_bg_for_ground
-{   background : #313032;
-  background : rgba(49, 48, 50, 1);
-  border-style : Solid;
-  border-color : #000000;
-  border-color : rgba(0, 0, 0, 1);
-  border-width : 3px;
-  border-radius : 6px;
-}
-</string>
-    </property>
-    <widget class="QWidget" name="widget_ground" native="true">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>320</width>
-       <height>210</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">  background: url(:/images/ground.png);
-  border-style : Solid;
-  border-color : #000000;
-  border-color : rgba(0, 0, 0, 1);
-  border-width : 3px;
-  border-radius : 9px;</string>
-     </property>
-    </widget>
    </widget>
   </widget>
  </widget>

@@ -136,8 +136,8 @@ void secondwindow::set_the_size_of_the_windows(){
     int h=9;
 
     //creating a graphic field,label for version and setting the size of the window and field
-    this->setFixedSize(500+22*(_width>w?_width-w:0),320+22*(_height>h?_height-h:0));
-    ui->widget_1->setFixedSize(480+22*(_width>w?_width-w:0),300+22*(_height>h?_height-h:0));
+    this->setFixedSize(500+22*(_width>w?_width-w:0),380+22*(_height>h?_height-h:0));
+    ui->widget_1->setFixedSize(480+22*(_width>w?_width-w:0),360+22*(_height>h?_height-h:0));
 
     ui->widget_bg_for_ground->setFixedSize(340+22*(_width>w?_width-w:0),230+22*(_height>h?_height-h:0));
     ui->widget_ground->setFixedSize(320+22*(_width>w?_width-w:0),210+22*(_height>h?_height-h:0));
@@ -145,12 +145,15 @@ void secondwindow::set_the_size_of_the_windows(){
     //ui->widget_bg_for_ground->setFixedSize(34+22*_width,34+22*_height);
     //ui->widget_ground->setFixedSize(14+22*_width,14+22*_height);
 
-    ui->label_for_version->setGeometry({10, 275+22*(_height>h?_height-h:0), 60, 15});
+    ui->label_for_version->setGeometry({10, 335+22*(_height>h?_height-h:0), 45, 15});
 
 }
 
 void secondwindow::create_matrix_of_lamp(){//function that creates a scoreboard from lamps
     set_the_size_of_the_windows();
+    //calculate the coordinates for centering the button relative to the widget_ground
+    int pos_on_ground_x=22+ui->widget_bg_for_ground->x()+ui->widget_ground->width()/2-((float)_width/2)*22;
+    int pos_on_ground_y=20+ui->widget_bg_for_ground->y()+ui->widget_ground->height()/2-((float)_height/2)*22;
 
     _matrix_of_button_lamps=new LampBtn* [_width];
     for (int count=0;count<_width;count++) _matrix_of_button_lamps[count]=new LampBtn[_height];
@@ -158,8 +161,9 @@ void secondwindow::create_matrix_of_lamp(){//function that creates a scoreboard 
     for (int i=0;i<_width;i++){
         for (int j=0;j<_height;j++){
             //creating a scoreboard of lamp buttons
+
             _matrix_of_button_lamps[i][j].lamp_btn=new QPushButton(this);
-            _matrix_of_button_lamps[i][j].lamp_btn->setGeometry({158+i*22, 86+j*22, 20, 20});
+            _matrix_of_button_lamps[i][j].lamp_btn->setGeometry({pos_on_ground_x+i*22, pos_on_ground_y+j*22, 20, 20});
             _matrix_of_button_lamps[i][j].lamp_btn->setStyleSheet("border-image: url(\":/images/lamp_ligth_off.png\")");
 
             _matrix_of_button_lamps[i][j].value=_zero_layers; //while a maximum of 32 layers (frames)
@@ -188,30 +192,37 @@ void secondwindow::pushButton_of_lamp_clicked(){//a function that sets the value
     }
 }
 
+
+void secondwindow::ClearLayer(int layer){
+    //in the last layer, set all signals to 0
+    for (int i=0;i<_width;i++){
+            for (int j=0;j<_height;j++){
+                       _matrix_of_button_lamps[i][j].value.replace(layer-1,1,"0");
+            }
+    }
+}
+
 void secondwindow::on_pushButton_of_delete_clicked()
 {
     //if there is only one layer left, then we do not delete it
     if(_number_of_layers==1)return;
-
-    //in the last layer, set all signals to 0
-    for (int i=0;i<_width;i++){
-            for (int j=0;j<_height;j++){
-                       _matrix_of_button_lamps[i][j].value.replace(_number_of_layers-1,1,"0");
-            }
-    }
-
+    ClearLayer(_number_of_layers);
     set_number_of_layers(QString::number(_number_of_layers-1));
-    //on_number_of_layers_Slider_valueChanged(1);
 
 }
 
 void secondwindow::on_pushButton_of_add_clicked()
 {
     if(_number_of_layers>=32)return;
-
     set_number_of_layers(QString::number(_number_of_layers+1));
-    //on_number_of_layers_Slider_valueChanged(1);
 }
+
+void secondwindow::on_pushButton_of_clear_clicked()
+{
+    ClearLayer(_current_layer);
+    on_number_of_layers_Slider_valueChanged(_current_layer);
+}
+
 
 secondwindow::~secondwindow()
 {
@@ -219,4 +230,6 @@ secondwindow::~secondwindow()
         delete []_matrix_of_button_lamps[count];
     delete ui;
 }
+
+
 

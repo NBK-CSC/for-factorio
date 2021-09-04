@@ -31,6 +31,9 @@ public:
     QSpinBox *height;
     QSpinBox *number_of_layers;
     QLabel *label_for_version;
+    QLabel *clear_label_3;
+    QLabel *clear_label_4;
+    QLabel *clear_label_5;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -80,7 +83,7 @@ public:
         label->setGeometry(QRect(10, 10, 370, 80));
         label->setBaseSize(QSize(0, 0));
         QFont font;
-        font.setFamilies({QString::fromUtf8("OCR A Extended")});
+        font.setFamilies({QString::fromUtf8("Segoe UI Black")});
         font.setPointSize(8);
         font.setKerning(false);
         label->setFont(font);
@@ -103,8 +106,8 @@ public:
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(310, 110, 71, 31));
         QFont font1;
-        font1.setFamilies({QString::fromUtf8("OCR A Extended")});
-        font1.setPointSize(12);
+        font1.setFamilies({QString::fromUtf8("Segoe UI Black")});
+        font1.setPointSize(14);
         font1.setBold(false);
         font1.setItalic(false);
         font1.setKerning(false);
@@ -152,7 +155,7 @@ public:
         width->setObjectName(QString::fromUtf8("width"));
         width->setGeometry(QRect(0, 30, 61, 31));
         QFont font2;
-        font2.setFamilies({QString::fromUtf8("OCR A Extended")});
+        font2.setFamilies({QString::fromUtf8("Segoe UI Black")});
         width->setFont(font2);
         width->setStyleSheet(QString::fromUtf8(" QSpinBox {\n"
 "  color:white;\n"
@@ -432,7 +435,7 @@ public:
         number_of_layers->setValue(5);
         label_for_version = new QLabel(widget);
         label_for_version->setObjectName(QString::fromUtf8("label_for_version"));
-        label_for_version->setGeometry(QRect(320, 155, 60, 15));
+        label_for_version->setGeometry(QRect(335, 155, 45, 15));
         label_for_version->setFont(font2);
         label_for_version->setStyleSheet(QString::fromUtf8("QWidget{\n"
 "  color:white;\n"
@@ -445,6 +448,70 @@ public:
 "  border-radius : 6px;\n"
 "}\n"
 ""));
+        clear_label_3 = new QLabel(widget);
+        clear_label_3->setObjectName(QString::fromUtf8("clear_label_3"));
+        clear_label_3->setGeometry(QRect(10, 150, 61, 21));
+        QFont font3;
+        font3.setFamilies({QString::fromUtf8("Segoe UI Black")});
+        font3.setPointSize(8);
+        font3.setKerning(true);
+        clear_label_3->setFont(font3);
+        clear_label_3->setStyleSheet(QString::fromUtf8("QWidget{\n"
+"  color:white;\n"
+"  background : #403F40;\n"
+"  background : rgba(64, 63, 64, 1);\n"
+"  border-style : Solid;\n"
+"  border-color : #000000;\n"
+"  border-color : rgba(0, 0, 0, 1);\n"
+"  border-width : 3px;\n"
+"  border-radius : 6px;\n"
+"}\n"
+"\n"
+""));
+        clear_label_3->setFrameShadow(QFrame::Raised);
+        clear_label_3->setScaledContents(false);
+        clear_label_3->setAlignment(Qt::AlignCenter);
+        clear_label_3->setWordWrap(true);
+        clear_label_4 = new QLabel(widget);
+        clear_label_4->setObjectName(QString::fromUtf8("clear_label_4"));
+        clear_label_4->setGeometry(QRect(110, 150, 61, 21));
+        clear_label_4->setFont(font3);
+        clear_label_4->setStyleSheet(QString::fromUtf8("QWidget{\n"
+"  color:white;\n"
+"  background : #403F40;\n"
+"  background : rgba(64, 63, 64, 1);\n"
+"  border-style : Solid;\n"
+"  border-color : #000000;\n"
+"  border-color : rgba(0, 0, 0, 1);\n"
+"  border-width : 3px;\n"
+"  border-radius : 6px;\n"
+"}\n"
+"\n"
+""));
+        clear_label_4->setFrameShadow(QFrame::Raised);
+        clear_label_4->setScaledContents(false);
+        clear_label_4->setAlignment(Qt::AlignCenter);
+        clear_label_4->setWordWrap(true);
+        clear_label_5 = new QLabel(widget);
+        clear_label_5->setObjectName(QString::fromUtf8("clear_label_5"));
+        clear_label_5->setGeometry(QRect(210, 150, 61, 21));
+        clear_label_5->setFont(font3);
+        clear_label_5->setStyleSheet(QString::fromUtf8("QWidget{\n"
+"  color:white;\n"
+"  background : #403F40;\n"
+"  background : rgba(64, 63, 64, 1);\n"
+"  border-style : Solid;\n"
+"  border-color : #000000;\n"
+"  border-color : rgba(0, 0, 0, 1);\n"
+"  border-width : 3px;\n"
+"  border-radius : 6px;\n"
+"}\n"
+"\n"
+""));
+        clear_label_5->setFrameShadow(QFrame::Raised);
+        clear_label_5->setScaledContents(false);
+        clear_label_5->setAlignment(Qt::AlignCenter);
+        clear_label_5->setWordWrap(true);
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);
@@ -458,6 +525,9 @@ public:
         label->setText(QCoreApplication::translate("MainWindow", "Set the parameters for width, height, as well as the number of layers (frames) that you want to put.", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "Create", nullptr));
         label_for_version->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        clear_label_3->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:6pt;\">Wigth</span></p></body></html>", nullptr));
+        clear_label_4->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:6pt;\">Height</span></p></body></html>", nullptr));
+        clear_label_5->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:6pt;\">Layers</span></p></body></html>", nullptr));
     } // retranslateUi
 
 };
