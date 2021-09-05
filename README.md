@@ -38,4 +38,4 @@ The next line systems, decoded in decimal notation, are located opposite their c
 If you have any preferences or suggestions, as well as if you have any problems while running this application, write to
 [Issues](https://github.com/NBK-CSC/for-factorio/issues)
 
-NBC-CSC
+[N.B.K] cSc
