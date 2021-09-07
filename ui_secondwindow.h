@@ -529,12 +529,12 @@ public:
         label_for_version->setText(QCoreApplication::translate("secondwindow", "TextLabel", nullptr));
         clear_label_2->setText(QCoreApplication::translate("secondwindow", "<html><head/><body><p><span style=\" font-size:6pt;\">To clear this layer, click the &quot;Clear&quot; button.</span></p><p><br/></p></body></html>", nullptr));
 #if QT_CONFIG(tooltip)
-        pushButton_of_clear->setToolTip(QCoreApplication::translate("secondwindow", "Button, remove the last layer with all content", nullptr));
+        pushButton_of_clear->setToolTip(QCoreApplication::translate("secondwindow", "Button that clears this layer", nullptr));
 #endif // QT_CONFIG(tooltip)
         pushButton_of_clear->setText(QCoreApplication::translate("secondwindow", "Clear", nullptr));
         clear_label_3->setText(QCoreApplication::translate("secondwindow", "<html><head/><body><p><span style=\" font-size:6pt;\">To remove the last layer, click the &quot;Delete&quot; button.</span></p><p><br/></p></body></html>", nullptr));
 #if QT_CONFIG(tooltip)
-        pushButton_of_delete->setToolTip(QCoreApplication::translate("secondwindow", "Button, remove the last layer with all content", nullptr));
+        pushButton_of_delete->setToolTip(QCoreApplication::translate("secondwindow", "<html><head/><body><p>Button to remove the last layer with all content</p></body></html>", nullptr));
 #endif // QT_CONFIG(tooltip)
         pushButton_of_delete->setText(QCoreApplication::translate("secondwindow", "Delete", nullptr));
         clear_label_4->setText(QCoreApplication::translate("secondwindow", "<html><head/><body><p><span style=\" font-size:6pt;\">To add an additional layer at the end, click the &quot;Add&quot; button.</span></p><p><br/></p></body></html>", nullptr));

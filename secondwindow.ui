@@ -517,7 +517,7 @@ QSpinBox::down-button:pressed {
      </font>
     </property>
     <property name="toolTip">
-     <string>Button, remove the last layer with all content</string>
+     <string>Button that clears this layer</string>
     </property>
     <property name="styleSheet">
      <string notr="true"> QPushButton {
@@ -614,7 +614,7 @@ QSpinBox::down-button:pressed {
      </font>
     </property>
     <property name="toolTip">
-     <string>Button, remove the last layer with all content</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Button to remove the last layer with all content&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="styleSheet">
      <string notr="true"> QPushButton {
