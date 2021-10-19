@@ -1,6 +1,6 @@
 #include <windows.h>
 
-IDI_ICON1	ICON	"D:\\Qt projects\\for_factorio\\images\\chat-icon-select-button-icon.ico"
+IDI_ICON1	ICON	"D:\\Qt projects\\for_factorio\\images\\icon.ico"
 
 VS_VERSION_INFO VERSIONINFO
 	FILEVERSION 0,0,0,0

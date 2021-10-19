@@ -30,20 +30,21 @@ struct qt_meta_stringdata_secondwindow_t {
 static const qt_meta_stringdata_secondwindow_t qt_meta_stringdata_secondwindow = {
     {
 QT_MOC_LITERAL(0, 12), // "secondwindow"
-QT_MOC_LITERAL(13, 39), // "on_number_of_layers_Slider_va..."
-QT_MOC_LITERAL(53, 0), // ""
-QT_MOC_LITERAL(54, 5), // "value"
-QT_MOC_LITERAL(60, 29), // "on_pushButton_of_save_clicked"
-QT_MOC_LITERAL(90, 31), // "on_pushButton_of_delete_clicked"
-QT_MOC_LITERAL(122, 28), // "on_pushButton_of_add_clicked"
-QT_MOC_LITERAL(151, 30) // "on_pushButton_of_clear_clicked"
+QT_MOC_LITERAL(13, 29), // "on_pushButton_of_save_clicked"
+QT_MOC_LITERAL(43, 0), // ""
+QT_MOC_LITERAL(44, 30), // "on_pushButton_of_clear_clicked"
+QT_MOC_LITERAL(75, 31), // "on_pushButton_of_delete_clicked"
+QT_MOC_LITERAL(107, 28), // "on_pushButton_of_add_clicked"
+QT_MOC_LITERAL(136, 39), // "on_number_of_layers_Slider_va..."
+QT_MOC_LITERAL(176, 5) // "value"
 
     },
-    "secondwindow\0on_number_of_layers_Slider_valueChanged\0"
-    "\0value\0on_pushButton_of_save_clicked\0"
+    "secondwindow\0on_pushButton_of_save_clicked\0"
+    "\0on_pushButton_of_clear_clicked\0"
     "on_pushButton_of_delete_clicked\0"
     "on_pushButton_of_add_clicked\0"
-    "on_pushButton_of_clear_clicked"
+    "on_number_of_layers_Slider_valueChanged\0"
+    "value"
 };
 #undef QT_MOC_LITERAL
 
@@ -61,18 +62,18 @@ static const uint qt_meta_data_secondwindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   44,    2, 0x0a,    0 /* Public */,
-       4,    0,   47,    2, 0x08,    2 /* Private */,
-       5,    0,   48,    2, 0x08,    3 /* Private */,
-       6,    0,   49,    2, 0x08,    4 /* Private */,
-       7,    0,   50,    2, 0x08,    5 /* Private */,
+       1,    0,   44,    2, 0x08,    0 /* Private */,
+       3,    0,   45,    2, 0x08,    1 /* Private */,
+       4,    0,   46,    2, 0x08,    2 /* Private */,
+       5,    0,   47,    2, 0x08,    3 /* Private */,
+       6,    1,   48,    2, 0x08,    4 /* Private */,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::Int,    3,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,    7,
 
        0        // eod
 };
@@ -83,11 +84,11 @@ void secondwindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         auto *_t = static_cast<secondwindow *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->on_number_of_layers_Slider_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 1: _t->on_pushButton_of_save_clicked(); break;
+        case 0: _t->on_pushButton_of_save_clicked(); break;
+        case 1: _t->on_pushButton_of_clear_clicked(); break;
         case 2: _t->on_pushButton_of_delete_clicked(); break;
         case 3: _t->on_pushButton_of_add_clicked(); break;
-        case 4: _t->on_pushButton_of_clear_clicked(); break;
+        case 4: _t->on_number_of_layers_Slider_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -101,7 +102,7 @@ const QMetaObject secondwindow::staticMetaObject = { {
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_secondwindow_t
 
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>
 
 
 >,

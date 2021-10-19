@@ -7,5 +7,7 @@
         <file>images/minus.png</file>
         <file>images/plus.png</file>
         <file>images/chat-icon-select-button-icon.ico</file>
+        <file>images/lazy-bastard.png</file>
+        <file>images/icon.ico</file>
     </qresource>
 </RCC>

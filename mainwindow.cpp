@@ -8,8 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-    //this->setWindowIcon(QIcon(":/images/chat-icon-select-button-icon.png"));
-    this->setFixedSize(410,200);
+    this->setFixedSize(430,220);
     ui->setupUi(this);
     ui->label_for_version->setText(VER);
 }
@@ -22,11 +21,11 @@ void MainWindow::on_pushButton_clicked()
 
     secondwindow window;
 
-    window.setWindowTitle("For factorio");
-    window.set_height(new_height);
-    window.set_width(new_width);
-    window.set_number_of_layers(new_number_of_layers);
-    window.create_matrix_of_lamp();
+    window.setWindowTitle("For Factorio");
+    window.SetHeight(new_height);
+    window.SetWidth(new_width);
+    window.SetNumberLayers(new_number_of_layers);
+    window.CreateMatrixLamps();
     this->hide();
     window.setModal(true);
     window.exec();
@@ -38,4 +37,24 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+
+void MainWindow::on_pushButton_open_clicked()
+{
+    FileHandling* fileHanding=new FileHandling();
+    if (!fileHanding->OpenFile())return;
+
+    secondwindow window;
+
+    window.setWindowTitle("For Factorio");
+    window.SetWidth(QString::number(fileHanding->GetWidth()));
+    window.SetHeight(QString::number(fileHanding->GetHeight()));
+    window.SetNumberLayers(QString::number(fileHanding->GetNumberLayers()));
+    window.CreateMatrixLamps(fileHanding->GetMatrixButtonLamps());
+    window.ChangeLayerView(1);
+    this->hide();
+    window.setModal(true);
+    window.exec();
+    delete fileHanding;
+}
 

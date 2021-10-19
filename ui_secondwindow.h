@@ -46,7 +46,7 @@ public:
         if (secondwindow->objectName().isEmpty())
             secondwindow->setObjectName(QString::fromUtf8("secondwindow"));
         secondwindow->setEnabled(true);
-        secondwindow->resize(500, 380);
+        secondwindow->resize(710, 481);
         secondwindow->setMouseTracking(false);
         secondwindow->setTabletTracking(false);
         secondwindow->setLayoutDirection(Qt::LeftToRight);
@@ -86,7 +86,7 @@ public:
 "}"));
         pushButton_of_save = new QPushButton(widget_1);
         pushButton_of_save->setObjectName(QString::fromUtf8("pushButton_of_save"));
-        pushButton_of_save->setGeometry(QRect(10, 10, 111, 40));
+        pushButton_of_save->setGeometry(QRect(10, 19, 111, 51));
         QFont font;
         font.setFamilies({QString::fromUtf8("Segoe UI Black")});
         font.setPointSize(16);
@@ -291,7 +291,7 @@ public:
         number_of_layers_spinBox->setMinimum(1);
         label_for_version = new QLabel(widget_1);
         label_for_version->setObjectName(QString::fromUtf8("label_for_version"));
-        label_for_version->setGeometry(QRect(20, 330, 60, 15));
+        label_for_version->setGeometry(QRect(10, 340, 60, 15));
         QFont font2;
         font2.setFamilies({QString::fromUtf8("Segoe UI Black")});
         font2.setPointSize(8);
@@ -331,7 +331,7 @@ public:
 "  border-radius : 9px;"));
         clear_label_2 = new QLabel(widget_1);
         clear_label_2->setObjectName(QString::fromUtf8("clear_label_2"));
-        clear_label_2->setGeometry(QRect(10, 70, 111, 71));
+        clear_label_2->setGeometry(QRect(10, 100, 111, 71));
         QFont font3;
         font3.setFamilies({QString::fromUtf8("Segoe UI Black")});
         font3.setPointSize(6);
@@ -354,7 +354,7 @@ public:
         clear_label_2->setWordWrap(true);
         pushButton_of_clear = new QPushButton(widget_1);
         pushButton_of_clear->setObjectName(QString::fromUtf8("pushButton_of_clear"));
-        pushButton_of_clear->setGeometry(QRect(20, 100, 81, 31));
+        pushButton_of_clear->setGeometry(QRect(20, 130, 91, 31));
         QFont font4;
         font4.setFamilies({QString::fromUtf8("Segoe UI Black")});
         font4.setPointSize(14);
@@ -391,7 +391,7 @@ public:
 " }"));
         clear_label_3 = new QLabel(widget_1);
         clear_label_3->setObjectName(QString::fromUtf8("clear_label_3"));
-        clear_label_3->setGeometry(QRect(10, 150, 111, 71));
+        clear_label_3->setGeometry(QRect(10, 175, 111, 71));
         clear_label_3->setFont(font3);
         clear_label_3->setStyleSheet(QString::fromUtf8("QWidget{\n"
 "  color:white;\n"
@@ -410,7 +410,7 @@ public:
         clear_label_3->setWordWrap(true);
         pushButton_of_delete = new QPushButton(widget_1);
         pushButton_of_delete->setObjectName(QString::fromUtf8("pushButton_of_delete"));
-        pushButton_of_delete->setGeometry(QRect(20, 180, 81, 31));
+        pushButton_of_delete->setGeometry(QRect(20, 205, 91, 31));
         pushButton_of_delete->setFont(font4);
         pushButton_of_delete->setStyleSheet(QString::fromUtf8(" QPushButton {\n"
 "  color:white;\n"
@@ -444,7 +444,7 @@ public:
 " }"));
         clear_label_4 = new QLabel(widget_1);
         clear_label_4->setObjectName(QString::fromUtf8("clear_label_4"));
-        clear_label_4->setGeometry(QRect(10, 230, 111, 81));
+        clear_label_4->setGeometry(QRect(10, 250, 111, 81));
         clear_label_4->setFont(font3);
         clear_label_4->setStyleSheet(QString::fromUtf8("QWidget{\n"
 "  color:white;\n"
@@ -463,7 +463,7 @@ public:
         clear_label_4->setWordWrap(true);
         pushButton_of_add = new QPushButton(widget_1);
         pushButton_of_add->setObjectName(QString::fromUtf8("pushButton_of_add"));
-        pushButton_of_add->setGeometry(QRect(20, 270, 81, 31));
+        pushButton_of_add->setGeometry(QRect(20, 290, 91, 31));
         pushButton_of_add->setFont(font4);
         pushButton_of_add->setToolTipDuration(-1);
         pushButton_of_add->setStyleSheet(QString::fromUtf8(" QPushButton {\n"
@@ -496,6 +496,23 @@ public:
 "  border-width : 3px;\n"
 "  border-radius : 6px;\n"
 " }"));
+        clear_label_4->raise();
+        pushButton_of_add->raise();
+        pushButton_of_save->raise();
+        widget_for_label->raise();
+        number_of_layers_Slider->raise();
+        number_of_layers_spinBox->raise();
+        label_for_version->raise();
+        widget_bg_for_ground->raise();
+        clear_label_2->raise();
+        pushButton_of_clear->raise();
+        clear_label_3->raise();
+        pushButton_of_delete->raise();
+        QWidget::setTabOrder(pushButton_of_save, number_of_layers_spinBox);
+        QWidget::setTabOrder(number_of_layers_spinBox, pushButton_of_clear);
+        QWidget::setTabOrder(pushButton_of_clear, pushButton_of_delete);
+        QWidget::setTabOrder(pushButton_of_delete, pushButton_of_add);
+        QWidget::setTabOrder(pushButton_of_add, number_of_layers_Slider);
 
         retranslateUi(secondwindow);
         QObject::connect(number_of_layers_Slider, &QSlider::valueChanged, number_of_layers_spinBox, &QSpinBox::setValue);

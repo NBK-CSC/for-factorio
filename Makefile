@@ -178,12 +178,12 @@ Makefile: for_factorio.pro ../../Programs/Qt/6.1.2/mingw81_64/mkspecs/win32-g++/
 		../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/resolve_config.prf \
 		../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/exclusive_builds_post.prf \
 		../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/default_post.prf \
+		../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/resources_functions.prf \
 		../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/qtquickcompiler.prf \
 		../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/entrypoint.prf \
 		../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/precompile_header.prf \
 		../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/warn_on.prf \
 		../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/qt.prf \
-		../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/resources_functions.prf \
 		../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/resources.prf \
 		../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/moc.prf \
 		../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/win32/opengl.prf \
@@ -198,6 +198,8 @@ Makefile: for_factorio.pro ../../Programs/Qt/6.1.2/mingw81_64/mkspecs/win32-g++/
 		for_factorio.pro \
 		../../Programs/Qt/6.1.2/mingw81_64/lib/Qt6Widgets.prl \
 		../../Programs/Qt/6.1.2/mingw81_64/lib/Qt6Gui.prl \
+		../../Programs/Qt/6.1.2/mingw81_64/lib/Qt6Qml.prl \
+		../../Programs/Qt/6.1.2/mingw81_64/lib/Qt6Network.prl \
 		../../Programs/Qt/6.1.2/mingw81_64/lib/Qt6Core.prl \
 		../../Programs/Qt/6.1.2/mingw81_64/lib/Qt6EntryPoint.prl \
 		../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/build_pass.prf \
@@ -311,12 +313,12 @@ Makefile: for_factorio.pro ../../Programs/Qt/6.1.2/mingw81_64/mkspecs/win32-g++/
 ../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/resolve_config.prf:
 ../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/exclusive_builds_post.prf:
 ../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/default_post.prf:
+../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/resources_functions.prf:
 ../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/qtquickcompiler.prf:
 ../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/entrypoint.prf:
 ../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/precompile_header.prf:
 ../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/warn_on.prf:
 ../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/qt.prf:
-../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/resources_functions.prf:
 ../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/resources.prf:
 ../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/moc.prf:
 ../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/win32/opengl.prf:
@@ -331,6 +333,8 @@ Makefile: for_factorio.pro ../../Programs/Qt/6.1.2/mingw81_64/mkspecs/win32-g++/
 for_factorio.pro:
 ../../Programs/Qt/6.1.2/mingw81_64/lib/Qt6Widgets.prl:
 ../../Programs/Qt/6.1.2/mingw81_64/lib/Qt6Gui.prl:
+../../Programs/Qt/6.1.2/mingw81_64/lib/Qt6Qml.prl:
+../../Programs/Qt/6.1.2/mingw81_64/lib/Qt6Network.prl:
 ../../Programs/Qt/6.1.2/mingw81_64/lib/Qt6Core.prl:
 ../../Programs/Qt/6.1.2/mingw81_64/lib/Qt6EntryPoint.prl:
 ../../Programs/Qt/6.1.2/mingw81_64/mkspecs/features/build_pass.prf:
