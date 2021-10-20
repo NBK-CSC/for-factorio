@@ -21,7 +21,7 @@ The "Delete" button deletes the last layer (frame).
 The deleted layer (frame) is automatically cleared! "Add" button - adds an additional layer (frame) to the end. 
 ## 
 The "Save" button is designed to save the matrix-lights (scoreboard) and decoded numbers in the directory that you select and in the file you gave the name.  In the * .txt file, information about the scoreboard is printed (width, height, number of layers), the matrix of lamps itself is printed with numbering for a visual representation.
-
+###### !!! in Notepad, check if the "Format/Hyphenation with words" function is disabled, otherwise your matrix will screw up and it will be more difficult to work with it
 ![image](https://user-images.githubusercontent.com/71842972/137976666-f751f70e-2a1a-4668-83c6-62f76dac328a.png)
 ###### (An example of what a 3x3 field will look like in a *.txt file.)
 
